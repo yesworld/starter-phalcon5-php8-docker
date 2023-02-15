@@ -29,10 +29,12 @@ RUN cd /tmp \
     && rm -r /tmp/v${PHALCON_VERSION}.tar.gz /tmp/cphalcon-${PHALCON_VERSION}
 
 # Import fpm config file
-COPY www.conf /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf
+COPY docker/php/www.conf /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf
 
-# Import composer
+# Import composer and run dump
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+COPY composer.lock composer.json /var/www/html/
+RUN composer dump-autoload
 
 # Start fpm service
 CMD ["php-fpm","-F"]

@@ -3,7 +3,8 @@ version: '3.7'
 services:
   php:
     build:
-      context: ./docker/fpm
+      context: ./
+      dockerfile: ./docker/php/Dockerfile
       args:
         PHALCON_VERSION: 5.1.4
         PSR_VERSION: 1.1.0
