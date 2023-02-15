@@ -1,0 +1,10 @@
+###> base ###
+.idea
+.vscode
+.DS_Store
+vendor/
+###< ide ###
+
+###> friendsofphp/php-cs-fixer ###
+/.php-cs-fixer.cache
+###< friendsofphp/php-cs-fixer ###

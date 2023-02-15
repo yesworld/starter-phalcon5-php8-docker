@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  php:
+    build:
+      context: ./docker/fpm
+      args:
+        PHALCON_VERSION: 5.1.4
+        PSR_VERSION: 1.1.0
+        PHP_VERSION: 8.1
+    restart: unless-stopped
+    volumes:
+      - ./:/var/www/html
+
+  nginx:
+    build: ./docker/nginx
+    restart: unless-stopped
+    ports:
+      - 80:80

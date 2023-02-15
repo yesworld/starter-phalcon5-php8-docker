@@ -1,0 +1,19 @@
+{
+    "name": "yesworld/phalcon5-php8-docker",
+    "version": "0.0.1",
+    "description": "Simple starter Web-project for PHP Phalcon",
+    "keywords": ["Php", "phalcon", "mysql", "docker"],
+    "require": {
+        "php": "~8.1",
+        "ext-psr": "1.1.0",
+        "ext-phalcon": ">=5.1.4"
+    },
+    "authors": [
+        {
+            "name": "Damir Ahmedshin",
+            "email": "a.yesworld@gmail.com"
+        }
+    ],
+    "type": "library",
+    "license": "MIT"
+}
