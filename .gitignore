@@ -3,7 +3,8 @@
 .vscode
 .DS_Store
 vendor/
-###< ide ###
+docker/mysql/db
+###< base ###
 
 ###> friendsofphp/php-cs-fixer ###
 /.php-cs-fixer.cache

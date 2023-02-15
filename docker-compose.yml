@@ -16,4 +16,18 @@ services:
     build: ./docker/nginx
     restart: unless-stopped
     ports:
-      - 80:80
+      - "80:80"
+
+  db:
+    image: mysql:8.0.32
+#    user: "root"
+    environment:
+      MYSQL_DATABASE: 'testdb'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: '12345'
+      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker/mysql/db:/var/lib/mysql
