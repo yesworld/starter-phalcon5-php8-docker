@@ -1,7 +1,9 @@
+# Simple starter Web-project for PHP Phalcon
+
 ## Description
-Simple starter Web-project for PHP Phalcon:
 - 🦅 Phalcon framework version 5.1.4
 - 🐘 PHP 8.1
+- 🐛 Xdebug 3
 - 🗄 MySql 8
 
 ### Configuration
@@ -21,3 +23,6 @@ and go to web 🕸:
 ```
 http://localhost:80
 ```
+
+## Xdebug
+> [How to install and configure PHPStorm for Xdebug.](docs/xdebug/INSTALL.md)
