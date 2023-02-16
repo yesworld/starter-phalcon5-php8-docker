@@ -10,6 +10,12 @@ services:
         PSR_VERSION: 1.1.0
         PHP_VERSION: 8.1
     restart: unless-stopped
+    environment:
+      XDEBUG_CONFIG: discover_client_host=1 client_host=host.docker.internal client_port=9003
+      XDEBUG_MODE: debug
+      PHP_IDE_CONFIG: serverName=docker
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
     volumes:
       - ./:/var/www/html
 
