@@ -10,7 +10,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 RUN chmod +x /usr/local/bin/install-php-extensions
 
 # Install PHP extensions
-RUN install-php-extensions xdebug
+RUN install-php-extensions xdebug pdo_mysql
 
 # Install psr
 RUN cd /tmp \
