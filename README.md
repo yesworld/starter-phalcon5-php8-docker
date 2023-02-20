@@ -24,5 +24,10 @@ and go to web 🕸:
 http://localhost:80
 ```
 
+## Phalcon 5 Autocomplete
+⚙️ **Settings > Plugins > Marketplace**
+
+`Search: _Phalcon 5 Autocomplete_`
+
 ## Xdebug
 > [How to install and configure PHPStorm for Xdebug.](docs/xdebug/INSTALL.md)
