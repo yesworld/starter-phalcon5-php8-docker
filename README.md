@@ -24,10 +24,15 @@ and go to web 🕸:
 http://localhost:80
 ```
 
+## PHP Fixer
+```
+docker exec -it phalcon-php bash -c "vendor/bin/php-cs-fixer fix src"
+```
+
 ## Phalcon 5 Autocomplete
 ⚙️ **Settings > Plugins > Marketplace**
 
-`Search: _Phalcon 5 Autocomplete_`
+Search: _Phalcon 5 Autocomplete_
 
 ## Xdebug
 > [How to install and configure PHPStorm for Xdebug.](docs/xdebug/INSTALL.md)

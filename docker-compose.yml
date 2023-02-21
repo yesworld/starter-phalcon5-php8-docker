@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
   php:
+    container_name: 'phalcon-php'
     build:
       context: ./
       dockerfile: ./docker/php/Dockerfile
@@ -20,12 +21,14 @@ services:
       - ./:/var/www/html
 
   nginx:
+    container_name: 'phalcon-nginx'
     build: ./docker/nginx
     restart: unless-stopped
     ports:
       - "80:80"
 
   db:
+    container_name: 'phalcon-db'
     image: mysql:8.0.32
 #    user: "root"
     environment:
