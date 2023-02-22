@@ -26,7 +26,7 @@ http://localhost:80
 
 ## PHP Fixer
 ```
-docker exec -it phalcon-php bash -c "vendor/bin/php-cs-fixer fix src"
+docker exec -it phalcon-php bash -c "vendor/bin/php-cs-fixer fix"
 ```
 
 ## Phalcon 5 Autocomplete
