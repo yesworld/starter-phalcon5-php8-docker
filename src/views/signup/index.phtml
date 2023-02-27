@@ -1,24 +1,24 @@
 <h2>Sign up using this form</h2>
 
-<?php echo Phalcon\Tag::formLegacy(["signup/register"]); ?>
+<?php echo Phalcon\Tag::formLegacy(['signup/register']); ?>
 
 <p>
     <label for="name">Name</label>
-    <?php echo Phalcon\Tag::textField("name"); ?>
+    <?php echo Phalcon\Tag::textField('name'); ?>
 </p>
 
 <p>
     <label for="email">E-Mail</label>
-    <?php echo Phalcon\Tag::textField("email"); ?>
+    <?php echo Phalcon\Tag::textField('email'); ?>
 </p>
 
 <p>
     <label for="pass">Password</label>
-    <?php echo Phalcon\Tag::textField("pass"); ?>
+    <?php echo Phalcon\Tag::textField('pass'); ?>
 </p>
 
 <p>
-    <?php echo Phalcon\Tag::submitButton("Register"); ?>
+    <?php echo Phalcon\Tag::submitButton('Register'); ?>
 </p>
 
 </form>

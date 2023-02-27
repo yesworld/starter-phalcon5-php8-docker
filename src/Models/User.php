@@ -11,7 +11,7 @@ class User extends Model
     public int $id;
     public string $name;
     public string $email;
-    public ?string $pass;
+    public string $pass;
 
     public function initialize(): void
     {

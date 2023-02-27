@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-// namespace App\Controllers;
 use App\Models\User;
 use Phalcon\Mvc\Controller;
 
@@ -36,6 +35,6 @@ class SignupController extends Controller
 
         // passing a message to the view
         $this->view->message = $message;
-//        $this->view->setVar('users', $user);
+        // or $this->view->setVar('message', $message);
     }
 }

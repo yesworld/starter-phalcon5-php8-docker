@@ -5,8 +5,9 @@ declare(strict_types=1);
 $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__ . '/src')
     ->in(__DIR__ . '/public')
-
 //    ->in(__DIR__ . '/tests')
+    ->files()
+    ->name(['*.php', '*.phtml'])
 ;
 
 return (new PhpCsFixer\Config())
@@ -54,6 +55,8 @@ return (new PhpCsFixer\Config())
         'trailing_comma_in_multiline' => ['elements' => ['arrays', 'arguments', 'parameters']],
         'class_attributes_separation' => ['elements' => ['property' => 'only_if_meta', 'method' => 'one']],
         'assign_null_coalescing_to_coalesce_equal' => false,
+        // Convert double quotes to single quotes for simple strings.
+        'single_quote' => ['strings_containing_single_quote_chars' => true],
     ])->setFinder($finder);
 
 // global_namespace_import

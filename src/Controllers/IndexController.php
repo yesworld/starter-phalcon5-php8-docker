@@ -9,7 +9,6 @@ class IndexController extends Controller
 {
     public function indexAction(): void
     {
-//        return '<h1>Hello!</h1>';
         $this->view->users = User::find();
     }
 }
