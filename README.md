@@ -1,7 +1,7 @@
 # Simple starter Web-project for PHP Phalcon
 
 ## Description
-- 🦅 Phalcon framework version 5.1.4
+- 🦅 Phalcon framework version [5.1.4](https://docs.phalcon.io/5.0/en/introduction)
 - 🐘 PHP 8.1
 - 🐛 Xdebug 3
 - 🗄 MySql 8
