@@ -8,7 +8,7 @@ use Phalcon\Mvc\Model;
 
 class User extends Model
 {
-    public int $id;
+    public ?int $id = null;
     public string $name;
     public string $email;
     public string $pass;
