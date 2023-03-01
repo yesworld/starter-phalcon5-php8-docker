@@ -30,6 +30,7 @@ services:
   db:
     container_name: 'phalcon-db'
     image: mysql:8.0.32
+    restart: unless-stopped
 #    user: "root"
     environment:
       MYSQL_DATABASE: 'testdb'
