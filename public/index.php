@@ -10,7 +10,6 @@ use Phalcon\Mvc\View;
 
 define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/src');
-// ...
 
 $loader = new Loader();
 $loader->setDirectories(
@@ -27,7 +26,6 @@ $loader->setNamespaces([
 $loader->register();
 
 // create DI
-
 $di = new FactoryDefault();
 
 $di->set(

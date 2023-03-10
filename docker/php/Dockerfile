@@ -14,6 +14,13 @@ RUN chmod +x /usr/local/bin/install-php-extensions
 # Install PHP extensions
 RUN install-php-extensions xdebug pdo_mysql zip
 
+# Add logs error for php-fpm
+RUN echo "error_log = /var/log/php/error.log" >> /usr/local/etc/php/php.ini \
+  && echo "log_errors = On" >> /usr/local/etc/php/php.ini
+
+RUN mkdir -p /var/log/php \
+  && chown www-data:www-data /var/log/php
+
 # Install psr
 RUN cd /tmp \
     && curl -LO https://github.com/jbboehr/php-psr/archive/v${PSR_VERSION}.tar.gz \

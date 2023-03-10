@@ -19,6 +19,7 @@ services:
       - 'host.docker.internal:host-gateway'
     volumes:
       - ./:/var/www/html
+      - ./docker/php/logs:/var/log/php
 
   nginx:
     container_name: 'phalcon-nginx'
@@ -26,11 +27,13 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
 
   db:
     container_name: 'phalcon-db'
     image: mysql:8.0.32
-#    user: "root"
     environment:
       MYSQL_DATABASE: 'testdb'
       MYSQL_USER: 'user'
