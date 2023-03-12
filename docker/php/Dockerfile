@@ -19,6 +19,7 @@ RUN echo "error_log = /var/log/php/error.log" >> /usr/local/etc/php/php.ini \
   && echo "log_errors = On" >> /usr/local/etc/php/php.ini
 
 RUN mkdir -p /var/log/php \
+  && touch /var/log/php/error.log \
   && chown www-data:www-data /var/log/php
 
 # Install psr
