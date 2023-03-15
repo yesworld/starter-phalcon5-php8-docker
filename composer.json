@@ -10,12 +10,17 @@
         "ext-pdo": "*"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "*"
+        "friendsofphp/php-cs-fixer": "*",
+        "phpunit/phpunit": "^10"
     },
     "authors": [
         {
             "name": "Damir Ahmedshin",
             "email": "a.yesworld@gmail.com"
+        },
+        {
+            "name": "davidbayra",
+            "email": "davidbayra@gmail.com"
         }
     ],
     "autoload": {
