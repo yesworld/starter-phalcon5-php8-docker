@@ -1,15 +1,14 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Tests\Controllers;
 
-use IndexController;
 use PHPUnit\Framework\TestCase;
 
 class IndexControllerTest extends TestCase
 {
-
-    public function testIndexAction()
+    public function testIndexAction(): void
     {
-        $this->assertEquals(1,1);
+        $this->assertEquals(1, 1);
     }
 }

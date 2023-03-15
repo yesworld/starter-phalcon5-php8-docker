@@ -1,10 +1,11 @@
 # Simple starter Web-project for PHP Phalcon
 
 ## Description
-- 🦅 Phalcon framework version [5.1.4](https://docs.phalcon.io/5.0/en/introduction)
+- 🦅 Phalcon [5.1.4](https://docs.phalcon.io/5.0/en/introduction)
 - 🐘 PHP 8.1
 - 🐛 Xdebug 3
 - 🗄 MySql 8
+-  🚧 PHPUnit 10
 
 ### Configuration
 ⚠️ You need at least 2GB of memory for Docker.
@@ -36,3 +37,6 @@ Search: _Phalcon 5 Autocomplete_
 
 ## Xdebug
 > [How to install and configure PHPStorm for Xdebug.](docs/xdebug/INSTALL.md)
+
+## PHPUnit - Troubleshooting PHPStorm settings
+> [Setting PHPStorm](docs/phpunity/SETTING.md)
