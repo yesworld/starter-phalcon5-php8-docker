@@ -11,7 +11,8 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "*",
-        "phpunit/phpunit": "^10"
+        "phpunit/phpunit": "^10",
+        "symfony/http-client": "^6.2"
     },
     "authors": [
         {
