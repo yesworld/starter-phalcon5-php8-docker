@@ -13,8 +13,8 @@ class ApiController extends Controller
         $response->setContentType('application/json');
 
         $response->setJsonContent([
-            'Phalcon ver:' => (new Phalcon\Support\Version())->get(),
-            'PHP ver:' => PHP_VERSION,
+            'Phalcon' => (new Phalcon\Support\Version())->get(),
+            'PHP' => PHP_VERSION,
         ]);
 
         return $response;

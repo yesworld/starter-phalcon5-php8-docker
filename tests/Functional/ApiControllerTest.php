@@ -1,22 +1,22 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\Endpoints;
+namespace App\Tests\Functional;
 
 use App\Tests\AbstractEndpointTest;
 
-class IndexControllerTest extends AbstractEndpointTest
+class ApiControllerTest extends AbstractEndpointTest
 {
-    public function testIndexAction(): void
+    public function testVersionAction(): void
     {
-        $response = $this->http->request('GET', 'http://localhost');
+        $response = $this->http->request('GET', '/api/version');
 
         // Verify that the response status code is 200
         $this->assertEquals(200, $response->getStatusCode());
 
         // Verify that the response body contains the "version" key with the correct value
         $responseBody = json_decode($response->getContent(), true);
-        $this->assertArrayHasKey('version', $responseBody);
-        $this->assertEquals('1.0.0', $responseBody['version']);
+        $this->assertEquals('5.1.4', $responseBody['Phalcon']);
+        $this->assertEquals('8.1.16', $responseBody['PHP']);
     }
 }
