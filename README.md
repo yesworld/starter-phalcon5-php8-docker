@@ -40,3 +40,11 @@ Search: _Phalcon 5 Autocomplete_
 
 ## PHPUnit - Troubleshooting PHPStorm settings
 > [Setting PHPStorm](docs/phpunity/SETTING.md)
+
+```shell
+docker exec -it phalcon-php bash -c "vendor/bin/phpunit tests/Functional"
+```
+
+```shell
+docker exec -it phalcon-php bash -c "vendor/bin/phpunit tests/Units"
+```

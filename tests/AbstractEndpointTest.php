@@ -17,7 +17,7 @@ abstract class AbstractEndpointTest extends TestCase
         parent::__construct($name);
 
         $this->http = HttpClient::create([
-            'base_uri' => 'http://localhost:80/',
+            'base_uri' => 'http://phalcon-nginx',
         ]);
     }
 }
