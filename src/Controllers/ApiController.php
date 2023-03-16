@@ -8,12 +8,14 @@ class ApiController extends Controller
 {
     public function versionAction()
     {
-        $version = ['Phalcon ver:' => (new Phalcon\Support\Version())->get(),'PHP ver:' => PHP_VERSION];
-
         $response = new Response();
         $response->setStatusCode(200, 'OK');
         $response->setContentType('application/json');
-        $response->setJsonContent($version);
+
+        $response->setJsonContent([
+            'Phalcon ver:' => (new Phalcon\Support\Version())->get(),
+            'PHP ver:' => PHP_VERSION,
+        ]);
 
         return $response;
     }
