@@ -4,7 +4,6 @@
 ![img.png](img.png)
 
 ### For linux
-
 ![img_1.png](img_1.png)
 
 #### Add CLI Interpreters

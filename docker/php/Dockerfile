@@ -44,7 +44,11 @@ COPY docker/php/www.conf /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf
 # Import composer and run dump
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 COPY composer.lock composer.json /var/www/html/
-RUN composer dump-autoload
 
-# Start fpm service
+# Import setup script
+COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Start services
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["php-fpm","-F"]

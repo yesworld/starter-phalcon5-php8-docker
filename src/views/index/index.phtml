@@ -7,8 +7,8 @@ echo sprintf('<h5>PHP ver: %s</h5>', \PHP_VERSION);
 echo Phalcon\Tag::linkTo(['signup', 'Sign Up Here!', 'class' => 'btn btn-primary']);
 
 /** @var $users App\Models\User */
-if ($users->count() > 0) {
-    ?>
+if ($users->count() > 0) { ?>
+    <hr class="my-3">
     <table class="table table-bordered table-hover">
         <thead class="thead-light">
             <tr>
