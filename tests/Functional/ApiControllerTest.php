@@ -17,6 +17,6 @@ class ApiControllerTest extends AbstractEndpointTest
         // Verify that the response body contains the "version" key with the correct value
         $responseBody = json_decode($response->getContent(), true);
         $this->assertEquals('5.1.4', $responseBody['Phalcon']);
-        $this->assertEquals('8.1.16', $responseBody['PHP']);
+        $this->assertEquals('8.1.17', $responseBody['PHP']);
     }
 }

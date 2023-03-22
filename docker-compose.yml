@@ -9,7 +9,7 @@ services:
       args:
         PHALCON_VERSION: 5.1.4
         PSR_VERSION: 1.1.0
-        PHP_VERSION: 8.1
+        PHP_VERSION: 8.1.17
     restart: unless-stopped
     environment:
       XDEBUG_CONFIG: discover_client_host=1 client_host=host.docker.internal client_port=9003
