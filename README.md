@@ -5,7 +5,7 @@
 - 🐘 PHP 8.1
 - 🐛 Xdebug 3
 - 🗄 MySql 8
--  🚧 PHPUnit 10
+- 🚧 PHPUnit 10
 
 ### Configuration
 ⚠️ You need at least 2GB of memory for Docker.
@@ -38,7 +38,7 @@ Search: _Phalcon 5 Autocomplete_
 ## Xdebug
 > [How to install and configure PHPStorm for Xdebug.](docs/xdebug/INSTALL.md)
 
-## PHPUnit - Troubleshooting PHPStorm settings
+## PHPUnit - PHPStorm settings
 > [Setting PHPStorm](docs/phpunity/SETTING.md)
 
 ```shell
@@ -48,3 +48,8 @@ docker exec -it phalcon-php bash -c "vendor/bin/phpunit tests/Functional"
 ```shell
 docker exec -it phalcon-php bash -c "vendor/bin/phpunit tests/Units"
 ```
+
+## Troubleshooting with Windows
+
+If you get an error like this when starting Docker.
+> [phalcon-php | exec /usr/local/bin/entrypoint.sh: no such file or directory](docs/issues/INDEX.md)
