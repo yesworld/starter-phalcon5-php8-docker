@@ -42,7 +42,7 @@ RUN cd /tmp \
 COPY docker/php/www.conf /etc/php/${PHP_VERSION}/fpm/pool.d/www.conf
 
 # Import composer and run dump
-COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+COPY --from=composer:2.5 /usr/bin/composer /usr/local/bin/composer
 COPY composer.lock composer.json /var/www/html/
 
 # Import setup script
