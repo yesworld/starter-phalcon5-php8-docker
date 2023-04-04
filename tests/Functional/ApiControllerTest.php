@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 namespace App\Tests\Functional;
-
+use PHPUnit\Framework\Attributes\DataProvider;
 use App\Tests\AbstractEndpointTest;
 
 class ApiControllerTest extends AbstractEndpointTest
@@ -18,5 +18,23 @@ class ApiControllerTest extends AbstractEndpointTest
         $responseBody = json_decode($response->getContent(), true);
         $this->assertEquals('5.1.4', $responseBody['Phalcon']);
         $this->assertEquals('8.1.17', $responseBody['PHP']);
+    }
+
+    public static function dataRoutingList(): array
+    {
+        return [
+            ['index' => '/'],
+            ['signup' => '/signup'],
+            ['version' => '/api/version']
+        ];
+    }
+
+    #[DataProvider('dataRoutingList')]
+    public function testCheckStatusCodeForSuccess($route): void
+    {
+        $response = $this->http->request('GET', $route);
+
+        // Verify that the response status code is 200
+        $this->assertEquals(200, $response->getStatusCode());
     }
 }
