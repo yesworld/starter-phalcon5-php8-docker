@@ -41,4 +41,22 @@ class ApiControllerTest extends AbstractEndpointTest
         // Verify that the response status code is 200
         $this->assertEquals(200, $response->getStatusCode());
     }
+
+    public static function dataRoutingList(): array
+    {
+        return [
+            ['index' => '/'],
+            ['signup' => '/signup'],
+            ['version' => '/api/version']
+        ];
+    }
+
+    #[DataProvider('dataRoutingList')]
+    public function testCheckStatusCodeForSuccess($route): void
+    {
+        $response = $this->http->request('GET', $route);
+
+        // Verify that the response status code is 200
+        $this->assertEquals(200, $response->getStatusCode());
+    }
 }
